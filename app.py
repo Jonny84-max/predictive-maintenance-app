@@ -43,9 +43,9 @@ def decision_system(temp, vib, pres):
 
     # AI prediction
     new_data = pd.DataFrame({
-        'Temperature': [temp],
-        'Vibration': [vib],
-        'Pressure': [pres]
+        'Temperature': [80],
+        'Vibration': [0.5],
+        'Pressure': [30]
     })
     probability = model.predict_proba(new_data)[0][1]
     ai_maintenance = probability >= 0.5

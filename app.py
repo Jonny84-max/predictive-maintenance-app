@@ -45,9 +45,9 @@ def risk_score(temp, vib, pres):
     return (temp_score + vib_score + pres_score) / 3
 
 def risk_zone(score):
-    if score < 0.4:
+    if score <= 0.66:
         return "SAFE", "green"
-    elif score < 0.6:
+    elif score <= 0.78:
         return "WARNING", "orange"
     else:
         return "DANGER", "red"
@@ -112,7 +112,7 @@ def plot_risk_bar(score):
 # ---------------------------
 # 7. Streamlit UI
 # ---------------------------
-st.title("🔧 Predictive Maintenance System (AI Prototype)")
+st.title("🔧 Predictive Maintenance System")
 
 temp = st.number_input("Temperature", value=80.0)
 vib = st.number_input("Vibration", value=0.5)

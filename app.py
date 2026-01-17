@@ -76,4 +76,3 @@ if st.button("Check Maintenance"):
         st.write("✅ **Decision: Maintenance Needed**")
     else:
         st.write("✅ **Decision: No Maintenance Needed**")
-app.py

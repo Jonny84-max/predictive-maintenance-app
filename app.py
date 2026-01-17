@@ -4,6 +4,7 @@
 
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
@@ -41,14 +42,14 @@ def decision_system(temp, vib, pres):
     if temp >= 85 or vib >= 0.8 or pres >= 42:
         rule_maintenance = True
 
-    # AI prediction
+    # AI prediction (use actual user input)
     new_data = pd.DataFrame({
-        'Temperature': [80],
-        'Vibration': [0.5],
-        'Pressure': [30]
+        'Temperature': [temp],
+        'Vibration': [vib],
+        'Pressure': [pres]
     })
     probability = model.predict_proba(new_data)[0][1]
-    ai_maintenance = probability >= 0.5
+    ai_maintenance = probability >= 0.7  # stronger threshold
 
     # Final decision
     final_decision = rule_maintenance or ai_maintenance
@@ -76,3 +77,13 @@ if st.button("Check Maintenance"):
         st.write("✅ **Decision: Maintenance Needed**")
     else:
         st.write("✅ **Decision: No Maintenance Needed**")
+
+    # ===== Graph =====
+    st.write("### Data Scatter Plot")
+    fig, ax = plt.subplots()
+    ax.scatter(df['Temperature'], df['Vibration'], c=df['MaintenanceNeeded'])
+    ax.scatter(temp, vib, color='red', marker='x', s=100)
+    ax.set_xlabel("Temperature")
+    ax.set_ylabel("Vibration")
+    ax.set_title("Maintenance Data")
+    st.pyplot(fig)

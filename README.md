@@ -1,4 +1,4 @@
-## PREDICTIVE MAINTENANCE PROTOTYPE FOR MAIN ENGINES
+## PROTOTYPE PREDICTIVE MAINTENANCE SYSTEM FOR MARINE ENGINES
 
 This project is a predictive maintenance prototype deveoped with machine learning to support the monitoring and maintenance of main engines. 
 It utilizes field data from Nigerian Navy Ships to assess and monitor engine conditions, predicting maintenance needs.
@@ -28,7 +28,7 @@ Scikit-learn
 GitHub
 
 ## Live Application
-[Access the App Here](https://predictive-maintenance-app-nsm3wk8s9vxhbaezqjn5yu.streamlit.app/)
+[Prototype Predictive Maintenance System for Marine Engines](https://predictive-maintenance-app-nsm3wk8s9vxhbaezqjn5yu.streamlit.app/)
 
 ## Clone the repository
 ```bash

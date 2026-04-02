@@ -15,6 +15,11 @@ Data cleaning and selection of relevant marine engine parameters for analysis an
 Machine learning model development and validation.
 Deployed through Streamlit for real-time interaction.
 
+## Images of the streamlit interface and results
+![Streamlit interface for predictive maintenance](https://github.com/user-attachments/assets/0d8a742b-f8c5-4416-b71c-e71a68bbc71a)
+![Result with scatter plot visual](https://github.com/user-attachments/assets/cabb5153-b2b5-4034-91f9-4d40a53537e7)
+![Result from field data](https://github.com/user-attachments/assets/90676059-807d-49bb-ad86-52dddcf7c3a3)
+
 ## Tech Stack/Tools
 Python
 Streamlit  
@@ -30,4 +35,25 @@ GitHub
 git clone https://github.com/Jonny84-max/predictive-maintenance-app.git
 cd predictive-maintenance-app
 
-git repo clone Jonny84-max/predictive-maintenance-app
+## Virtual Environemnt 
+```bash
+python -m venv venv
+
+## Activating the virtual environment
+```bash
+venv\Scripts\activate
+
+## Installing dependencies
+```bash
+pip install -r requirements.txt
+
+## Runing the app
+```bash
+streamlit run app.py
+
+## Relevance ## roject demonstrates:
+Application of machine learning in marine propulsion systems.
+Predictive maintenance for main engine performance optimization.
+
+## Author
+Jonny84-max

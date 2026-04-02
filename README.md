@@ -22,3 +22,12 @@ Pandas
 Scikit-learn
 GitHub
 
+## Live Application
+[Access the App Here](https://predictive-maintenance-app-nsm3wk8s9vxhbaezqjn5yu.streamlit.app/)
+
+## Clone the repository
+```bash
+git clone https://github.com/Jonny84-max/predictive-maintenance-app.git
+cd predictive-maintenance-app
+
+git repo clone Jonny84-max/predictive-maintenance-app

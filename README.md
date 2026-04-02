@@ -36,19 +36,15 @@ git clone https://github.com/Jonny84-max/predictive-maintenance-app.git
 cd predictive-maintenance-app
 
 ## Virtual Environemnt 
-```bash
 python -m venv venv
 
 ## Activating the virtual environment
-```bash
 venv\Scripts\activate
 
 ## Installing dependencies
-```bash
 pip install -r requirements.txt
 
 ## Runing the app
-```bash
 streamlit run app.py
 
 ## Relevance ## roject demonstrates:

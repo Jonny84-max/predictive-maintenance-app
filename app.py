@@ -112,7 +112,7 @@ def plot_risk_bar(score):
 # ---------------------------
 # 7. Streamlit UI
 # ---------------------------
-st.title("🔧 Predictive Maintenance System")
+st.title("Predictive Maintenance System")
 
 temp = st.number_input("Temperature", value=80.0)
 vib = st.number_input("Vibration", value=0.5)
@@ -124,9 +124,9 @@ if st.button("Check Maintenance"):
     score = risk_score(temp, vib, pres)
     zone, color = risk_zone(score)
 
-    st.subheader("📊 Results")
-    st.write(f"**Maintenance Probability:** {prob:.2f}")
-    st.write(f"**Risk Zone:** :{color}[{zone}]")
+    st.subheader("Results")
+    st.write(f"Maintenance Probability: {prob:.2f}")
+    st.write(f"Risk Zone: :{color}[{zone}]")
 
     if rule_flag:
         st.warning("Rule-based threshold triggered")
@@ -136,8 +136,8 @@ if st.button("Check Maintenance"):
     else:
         st.success("No Maintenance Needed")
 
-    st.subheader("📈 Risk Visualization")
+    st.subheader("Risk Visualization")
     plot_risk_bar(score)
 
-    st.subheader("🔍 Scatter Analysis")
+    st.subheader("Scatter Analysis")
     plot_scatter(temp, vib)
